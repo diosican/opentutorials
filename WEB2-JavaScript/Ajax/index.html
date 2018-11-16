@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WEB1 - Welcome</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
+    <script src="ajax.js"></script>
+  </head>
+
+  <body style="background-color: white; color: black;">
+    <h1><a onclick="ajaxpage('welcome')">WEB</a></h1>
+    <input type="button" value="night" onclick="nightdayhandler(this)">
+    <div id="grid">
+      <ol id='nav'>
+      </ol>
+      <div id="article">
+        <article>
+        </article>
+      </div>
+      <!-- <script type="text/javascript">
+
+      if (location.hash){
+        fetchpage(location.hash.substr(2))
+      } else {
+        fetchpage('welcome')
+      }
+
+      fetchnav();
+
+      </script> -->
+
+      <script type="text/javascript">
+
+       if (location.hash){
+         ajaxpage(location.hash.substr(2))
+       } else {
+         ajaxpage('welcome')
+       }
+
+       ajaxnav();
+
+      </script>
+    </div>
+  </body>
+
+</html>
